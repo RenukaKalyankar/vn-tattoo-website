@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | V.N Tattoo & Art</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+
+            background:
+            radial-gradient(circle at top left,
+            rgba(255,60,120,0.22),
+            transparent 35%),
+
+
+            radial-gradient(circle at bottom right,
+            rgba(255,60,120,0.18),
+            transparent 35%),
+
+
+            linear-gradient(to bottom,#0f0f0f,#111111);
+
+            color:white;
+            overflow-x:hidden;
+        }
+
+        a{
+            text-decoration:none;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            width:100%;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1000;
+            background:rgba(0,0,0,0.7);
+            backdrop-filter:blur(10px);
+            padding:18px 60px;
+        }
+
+        .navbar-container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            font-size:28px;
+            font-weight:700;
+            color:#ff3c78;
+        }
+
+        .logo img{
+            width:70px;
+            height:70px;
+            border-radius:50%;
+            object-fit:cover;
+        }
+
+        .nav-links{
+            display:flex;
+            gap:35px;
+            list-style:none;
+        }
+
+        .nav-links a{
+            color:white;
+            transition:0.3s;
+            font-weight:500;
+        }
+
+        .nav-links a:hover{
+            color:#ff3c78;
+        }
+
+        /* HERO */
+
+        .gallery-hero{
+
+            height:45vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+            url('Images/background.png');
+
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+
+            position:relative;
+            overflow:hidden;
+        }
+
+        .gallery-hero::before{
+
+            content:"";
+
+            position:absolute;
+
+            width:500px;
+            height:500px;
+
+            background:rgba(255,60,120,0.18);
+
+            border-radius:50%;
+
+            top:-150px;
+            right:-100px;
+
+            filter:blur(120px);
+        }
+
+        .gallery-hero h1{
+
+            font-size:65px;
+
+            color:white;
+
+            position:relative;
+
+            z-index:2;
+
+            text-shadow:
+            0 0 15px rgba(255,60,120,0.9),
+            0 0 35px rgba(255,60,120,0.7);
+        }
+
+        /* GALLERY SECTION */
+
+        .gallery-section{
+            padding:100px 60px;
+        }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:60px;
+        }
+
+        .section-title h2{
+            font-size:45px;
+            color:#ff3c78;
+        }
+
+        .gallery-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+        }
+
+        .gallery-card{
+
+            overflow:hidden;
+
+            border-radius:20px;
+
+            position:relative;
+
+            background:rgba(255,255,255,0.05);
+
+            border:1px solid rgba(255,255,255,0.08);
+
+            backdrop-filter:blur(10px);
+
+            transition:0.4s;
+        }
+
+        .gallery-card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 15px 35px rgba(255,60,120,0.25);
+        }
+
+        .gallery-card img{
+            width:100%;
+            height:350px;
+            object-fit:cover;
+            transition:0.4s;
+        }
+
+        .gallery-card:hover img{
+            transform:scale(1.08);
+        }
+
+        .gallery-overlay{
+
+            position:absolute;
+
+            bottom:0;
+            left:0;
+
+            width:100%;
+
+            padding:20px;
+
+            background:linear-gradient(transparent,rgba(0,0,0,0.9));
+
+            color:white;
+        }
+
+        .gallery-overlay h3{
+            color:#ff3c78;
+            margin-bottom:5px;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:black;
+            text-align:center;
+            padding:20px;
+            color:#94a3b8;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .navbar{
+                padding:18px 20px;
+            }
+
+            .nav-links{
+                display:none;
+            }
+
+            .gallery-hero h1{
+                font-size:42px;
+            }
+
+            .gallery-section{
+                padding:70px 20px;
+            }
+
+            .section-title h2{
+                font-size:35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+                <img src="Images/LOGO1.jpeg" alt="Logo">
+                <span>V.N Tattoo & Art</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="Services.html">Services</a></li>
+
+                <li><a href="gallery.html">Gallery</a></li>
+
+                <li><a href="index.html#about">About</a></li>
+
+                <li><a href="index.html#contact">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="gallery-hero">
+
+        <h1>Our Tattoo Gallery</h1>
+
+    </section>
+
+    <!-- GALLERY -->
+
+    <section class="gallery-section">
+
+        <div class="section-title">
+            <h2>Creative Ink Collection</h2>
+        </div>
+
+        <div class="gallery-container">
+
+            <!-- IMAGE 1 -->
+
+            <div class="gallery-card">
+
+                <img src="Images/PORTRAIT.jpeg" alt="Tattoo">
+
+                <div class="gallery-overlay">
+                    <h3>Black & Grey Art</h3>
+                    <p>Premium realistic tattoo design</p>
+                </div>
+
+            </div>
+
+            <!-- IMAGE 2 -->
+
+            <div class="gallery-card">
+
+                <img src="Images/img3.jpeg" alt="Tattoo">
+
+                <div class="gallery-overlay">
+                    <h3>Portrait Tattoo</h3>
+                    <p>Detailed artistic portrait work</p>
+                </div>
+
+            </div>
+
+            <!-- IMAGE 3 -->
+
+            <div class="gallery-card">
+
+                <img src="Images/MINIMAL.jpeg" alt="Tattoo">
+
+                <div class="gallery-overlay">
+                    <h3>Minimal Design</h3>
+                    <p>Elegant minimalist tattoo style</p>
+                </div>
+
+            </div>
+
+            <!-- IMAGE 4 -->
+
+            <div class="gallery-card">
+
+                <img src="Images/TATTOCOVERUP.jpeg" alt="Tattoo">
+
+                <div class="gallery-overlay">
+                    <h3>Traditional Tattoo</h3>
+                    <p>Classic bold tattoo artwork</p>
+                </div>
+
+            </div>
+
+            <!-- IMAGE 5 -->
+
+            <div class="gallery-card">
+
+                <img src="Images/img2.jpeg" alt="Tattoo">
+
+                <div class="gallery-overlay">
+                    <h3>Spiritual Ink</h3>
+                    <p>Meaningful spiritual tattoo design</p>
+                </div>
+
+            </div>
+
+            <!-- IMAGE 6 -->
+
+            <div class="gallery-card">
+
+                <img src="Images/img1.jpeg" alt="Tattoo">
+
+                <div class="gallery-overlay">
+                    <h3>Custom Artwork</h3>
+                    <p>Unique custom creative tattoos</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>© 2026 V.N Tattoo Studio | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

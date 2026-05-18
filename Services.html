@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | V.N Tattoo & Art</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:
+            radial-gradient(circle at top left,
+            rgba(255,60,120,0.20),
+            transparent 35%),
+
+            radial-gradient(circle at bottom right,
+            rgba(255,60,120,0.15),
+            transparent 35%),
+
+            #0f0f0f;
+
+            color:white;
+            overflow-x:hidden;
+        }
+
+        a{
+            text-decoration:none;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+            width:100%;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1000;
+            background:rgba(0,0,0,0.7);
+            backdrop-filter:blur(10px);
+            padding:18px 60px;
+        }
+
+        .navbar-container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            color:#ff3c78;
+            font-size:28px;
+            font-weight:700;
+        }
+
+       
+        .logo img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:30px;
+    font-weight:700;
+    color:#ff3c78;
+    letter-spacing:2px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+        .nav-links{
+            display:flex;
+            gap:35px;
+            list-style:none;
+        }
+
+        .nav-links a{
+            color:white;
+            transition:0.3s;
+            font-weight:500;
+        }
+
+        .nav-links a:hover{
+            color:#ff3c78;
+        }
+
+        /* HERO */
+
+        .hero{
+            height:50vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        .hero h1{
+            font-size:70px;
+            color:#ff3c78;
+        }
+
+        .hero p{
+            margin-top:15px;
+            color:#d1d5db;
+            font-size:20px;
+        }
+
+        /* SERVICES */
+
+        .services{
+            padding:50px 60px 100px;
+        }
+
+        .service-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:35px;
+        }
+
+        .service-card{
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.08);
+            border-radius:20px;
+            overflow:hidden;
+            transition:0.4s;
+            backdrop-filter:blur(10px);
+        }
+
+        .service-card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 15px 35px rgba(255,60,120,0.25);
+        }
+
+        .service-card img{
+            width:100%;
+            height:260px;
+            object-fit:cover;
+        }
+
+        .service-content{
+            padding:25px;
+        }
+
+        .service-content h3{
+            color:#ff3c78;
+            margin-bottom:15px;
+            font-size:28px;
+        }
+
+        .service-content p{
+            color:#d1d5db;
+            line-height:1.8;
+            margin-bottom:20px;
+        }
+
+        .price{
+            color:white;
+            font-weight:600;
+            font-size:18px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:12px 28px;
+            background:#ff3c78;
+            color:white;
+            border-radius:40px;
+            transition:0.3s;
+            font-weight:600;
+        }
+
+        .btn:hover{
+            background:#ff1f62;
+            transform:scale(1.05);
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:black;
+            text-align:center;
+            padding:20px;
+            color:#94a3b8;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .navbar{
+                padding:18px 20px;
+            }
+
+            .nav-links{
+                display:none;
+            }
+
+            .hero h1{
+                font-size:45px;
+            }
+
+            .hero p{
+                font-size:16px;
+            }
+
+            .services{
+                padding:40px 20px 80px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+             <img src="Images/LOGO1.jpeg" alt="V.N Tattoo Logo">
+             <span>V.N Tattoo & Art</span>
+        </div>
+            
+            
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div>
+            <h1>Our Services</h1>
+
+            <p>
+                Professional tattoo artistry with creativity,
+                precision, and premium hygiene standards.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- SERVICES -->
+
+    <section class="services">
+
+        <div class="service-container">
+
+            <!-- CARD 1 -->
+
+            <div class="service-card">
+
+                <img src="Images/SERVICE1.jpeg" alt="Custom Tattoo">
+
+                <div class="service-content">
+
+                    <h3>Custom Tattoos</h3>
+
+                    <p>
+                        Personalized tattoo designs created specially
+                        according to your style and personality.
+                    </p>
+
+                    
+                    <a href="Book Appointment.html" class="btn">
+                        Book Now
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="service-card">
+
+                <img src="Images/PORTRAIT.jpeg" alt="Portrait Tattoo">
+
+                <div class="service-content">
+
+                    <h3>Portrait Tattoos</h3>
+
+                    <p>
+                        Highly detailed realistic portrait tattoos
+                        using premium quality inks and modern techniques.
+                    </p>
+
+
+                    <a href="Book Appointment.html" class="btn">
+                        Book Now
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="service-card">
+
+                <img src="Images/TATTOCOVERUP.jpeg" alt="Cover Up Tattoo">
+
+                <div class="service-content">
+
+                    <h3>Tattoo Cover-Up</h3>
+
+                    <p>
+                        Transform old tattoos into fresh modern artwork
+                        with expert cover-up tattoo solutions.
+                    </p>
+
+                    <a href="Book Appointment.html" class="btn">
+                        Book Now
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 4 -->
+
+            <div class="service-card">
+
+                <img src="Images/MINIMAL.jpeg" alt="Minimal Tattoo">
+
+                <div class="service-content">
+
+                    <h3>Minimal Tattoos</h3>
+
+                    <p>
+                        Elegant and stylish minimalist tattoos with
+                        clean lines and aesthetic modern designs.
+                    </p>
+
+                    <a href="Book Appointment.html" class="btn">
+                        Book Now
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 5 -->
+
+            <div class="service-card">
+
+                <img src="Images/temp.PNG" alt="Temporary Tattoo">
+
+                <div class="service-content">
+
+                    <h3>Temporary Tattoos</h3>
+
+                    <p>
+                        Stylish temporary tattoo art perfect for
+                        events, photoshoots, and fashion styling.
+                    </p>
+
+                    <a href="Book Appointment.html" class="btn">
+                        Book Now
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 6 -->
+
+            <div class="service-card">
+
+                <img src="Images/img2.jpeg" alt="Tattoo Consultation">
+
+                <div class="service-content">
+
+                    <h3>Tattoo Consultation</h3>
+
+                    <p>
+                        Expert guidance for tattoo placement,
+                        design ideas, and aftercare consultation.
+                    </p>
+
+
+                    <a href="Book Appointment.html" class="btn">
+                        Book Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>© 2026 V.N Tattoo Studio | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

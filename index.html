@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>V.N.Tattoo & Art</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+          html{
+            scroll-behavior:smooth;
+        }
+        
+        section{
+            scroll-margin-top:120px;
+        }
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+
+       body{
+    background:
+    radial-gradient(circle at top left,
+    rgba(255,60,120,0.22),
+    transparent 35%),
+
+
+    radial-gradient(circle at bottom right,
+    rgba(255,60,120,0.18),
+    transparent 35%),
+
+
+    linear-gradient(to bottom,#0f0f0f,#111111);
+
+    color:white;
+    overflow-x:hidden;
+}
+
+        a{
+            text-decoration:none;
+        }
+
+        html{
+    scroll-behavior:smooth;
+    }
+        /* NAVBAR */
+
+        .navbar{
+            width:100%;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1000;
+            background:rgba(0,0,0,0.7);
+            backdrop-filter:blur(10px);
+            padding:18px 60px;
+        }
+
+        .navbar-container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:30px;
+    font-weight:700;
+    color:#ff3c78;
+    letter-spacing:1px;
+}
+.logo img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+        .nav-links{
+            display:flex;
+            gap:35px;
+            list-style:none;
+        }
+
+        .nav-links a{
+            color:white;
+            transition:0.3s;
+            font-weight:500;
+        }
+
+        .nav-links a:hover{
+            color:#ff3c78;
+        }
+
+        /* HERO SECTION */
+
+        .hero{
+                height:100vh;
+                background:
+                linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                url('images/background.png') center/cover no-repeat;
+
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                text-align:center;
+                padding:20px;
+            }
+
+        .hero-content{
+            max-width:850px;
+        }
+
+        .hero-content h1{
+            font-size:75px;
+            margin-bottom:20px;
+            line-height:1.2;
+        }
+
+        .hero-content span{
+            color:#ff3c78;
+        }
+
+        .hero-content p{
+            font-size:20px;
+            color:#d1d5db;
+            margin-bottom:35px;
+            line-height:1.7;
+        }
+
+        .hero-buttons{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .btn{
+            padding:14px 35px;
+            border-radius:50px;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        .btn-primary{
+            background:#ff3c78;
+            color:white;
+        }
+
+        .btn-primary:hover{
+            background:#ff1f62;
+            transform:translateY(-5px);
+        }
+
+        .btn-outline{
+            border:2px solid white;
+            color:white;
+        }
+
+        .btn-outline:hover{
+            background:white;
+            color:black;
+        }
+
+        /* SERVICES */
+
+        .services{
+    
+            padding:100px 60px;
+            background:
+            radial-gradient(circle at top,#ff3c7850,#0f0f0f 60%);
+       }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:60px;
+        }
+
+        .section-title h2{
+            font-size:45px;
+            color:#ff3c78;
+        }
+
+        .service-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
+
+        .service-card{
+            background:#1a1a1a;
+            border-radius:20px;
+            overflow:hidden;
+            transition:0.4s;
+        }
+
+        .service-card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .service-card img{
+            width:100%;
+            height:250px;
+            object-fit:cover;
+        }
+
+        .service-content{
+            padding:25px;
+        }
+
+        .service-content h3{
+            margin-bottom:15px;
+            color:#ff3c78;
+        }
+
+        .service-content p{
+            color:#cbd5e1;
+            line-height:1.7;
+        }
+
+        /* ABOUT */
+
+        .about{
+            
+            padding:100px 60px;
+            background:transparent;
+            scroll-margin-top:120px;
+        }
+
+        .about-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:50px;
+            align-items:center;
+        }
+
+        .about img{
+            width:100%;
+            border-radius:10px;
+        }
+
+        .about-content h2{
+            font-size:45px;
+            margin-bottom:20px;
+            color:#ff3c78;
+        }
+
+        .about-content p{
+            color:#d1d5db;
+            line-height:1.9;
+            margin-bottom:20px;
+        }
+
+        /* GALLERY */
+
+        .gallery{
+            
+            padding:100px 60px;
+             background:#111111;
+              scroll-margin-top:120px;
+        }
+
+        .gallery-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .gallery-container img{
+            width:100%;
+            height:300px;
+            object-fit:cover;
+            border-radius:15px;
+            transition:0.4s;
+        }
+
+        .gallery-container img:hover{
+            transform:scale(1.05);
+        }
+
+        /* CONTACT */
+
+        .contact{
+            padding:100px 20px;
+            text-align:center;
+            scroll-margin-top:120px;
+        }
+
+        .contact h2{
+            font-size:45px;
+            color:#ff3c78;
+            margin-bottom:20px;
+        }
+
+        .contact p{
+            color:#cbd5e1;
+            margin-bottom:15px;
+            font-size:18px;
+        }
+
+        .social-icons{
+            margin-top:30px;
+        }
+
+        .social-icons a{
+            color:white;
+            font-size:24px;
+            margin:0 15px;
+            transition:0.3s;
+        }
+
+        .social-icons a:hover{
+            color:#ff3c78;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:black;
+            text-align:center;
+            padding:20px;
+            color:#94a3b8;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .navbar{
+                padding:18px 20px;
+            }
+
+            .nav-links{
+                display:none;
+            }
+
+            .hero-content h1{
+                font-size:45px;
+            }
+
+            .hero-content p{
+                font-size:16px;
+            }
+
+            .services,
+            .about,
+            .gallery{
+                padding:70px 20px;
+            }
+
+            .section-title h2,
+            .about-content h2,
+            .contact h2{
+                font-size:35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="logo">
+                <img src="Images/LOGO1.jpeg" alt="V.N.Tattoo Logo">
+                <span>V.N.Tattoo & Art</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="Services.html">Services</a></li>
+                
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <!--<li><a href="#">Contact</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Ink Your Story With <span>V.N.Tattoo & Art</span></h1>
+
+            <p>
+                WE CAN INK,WHAT YOU THINK.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="Book Appointment.html" class="btn btn-primary">
+                    Book Appointment
+                </a>
+
+                <a href="gallery.html" class="btn btn-outline">
+                    View Gallery
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SERVICES -->
+
+    <section class="services">
+
+        <div class="section-title">
+            <h2>Our Services</h2>
+        </div>
+
+        <div class="service-container">
+
+            <div class="service-card">
+
+                <img src="Images/SERVICE1.jpeg" 
+                alt="Tattoo"
+                 style="width:95%; height:430px; object-fit:cover;">
+
+                <div class="service-content">
+                    <h3>Custom Tattoos</h3>
+
+                    <p>
+                        Unique and personalized tattoo designs created
+                        according to your style and personality.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="service-card">
+
+                <img src="Images/img3.jpeg"
+                     alt="Tattoo"
+                     style="width:95%; height:430px; object-fit:cover;">
+            
+                <div class="service-content">
+            
+                    <h3>Portrait Tattoos</h3>
+            
+                    <p>
+                        Realistic portrait tattoos with detailed artwork
+                        and premium ink quality.
+                    </p>
+            
+                </div>
+            
+            </div>
+
+            <div class="service-card">
+
+                <img src="Images/img1.jpeg"
+                     alt="Tattoo"
+                     style="width:95%; height:430px; object-fit:cover;">
+            
+                <div class="service-content">
+            
+                    <h3>Cover-Up Tattoos</h3>
+            
+                    <p>
+                        Transform old tattoos into fresh modern artwork
+                        with expert cover-up techniques.
+                    </p>
+            
+                </div>
+            
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="about-container">
+
+            <div>
+                <img src="Images/ABOUT.jpeg"
+                     alt="Tattoo Artist">
+            </div>
+
+            <div class="about-content">
+
+                <h2>About V.N Tattoo Studio</h2>
+
+                <p>
+                    WE CAN INK WHAT YOU THINK.
+                </p>
+                <p>
+                    Welcome to V. N. Tattoo & Art — where creativity meets passion and every tattoo becomes a masterpiece. We believe tattoos are not just designs on skin; they are powerful expressions of personality, emotions, memories, and individuality.
+Known for artistic precision and unique custom concepts, our studio specializes in realism, black & grey, fine line, spiritual, portrait, and custom creative tattoos designed exclusively for every client. Every artwork is carefully crafted with deep attention to detail, ensuring a tattoo that feels personal, meaningful, and visually unforgettable.
+              At V. N. Tattoo & Art, we focus on delivering a premium tattoo experience through:
+Professional artistry
+International hygiene standards
+High-quality inks & equipment
+Creative custom designing
+Comfortable and client-friendly environment
+Our mission is simple — to turn your ideas into timeless art that you proudly carry for life. Whether you want something bold, spiritual, minimal, or highly detailed, we create tattoos that leave a lasting impression.
+           More than a tattoo studio, V. N. Tattoo & Art is a destination for art lovers, trendsetters, and people who believe their story deserves to be worn with pride.
+Your Vision. Our Art. One Masterpiece Forever.
+                </p>
+
+                
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY 
+
+    <section class="gallery" id="gallery">
+
+        <div class="section-title">
+            <h2>Our Gallery</h2>
+        </div>
+
+        <div class="gallery-container">
+
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1200&auto=format&fit=crop" alt="Tattoo">
+
+            <img src="https://images.unsplash.com/photo-1611501275231-81d46b0f3c64?q=80&w=1200&auto=format&fit=crop" alt="Tattoo">
+
+            <img src="https://images.unsplash.com/photo-1543248939-4296e1fea89b?q=80&w=1200&auto=format&fit=crop" alt="Tattoo">
+
+            <img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?q=80&w=1200&auto=format&fit=crop" alt="Tattoo">
+
+        </div>
+
+    </section> -->
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p><i class="fa-solid fa-location-dot"></i> Nashik, Maharashtra</p>
+
+        <p><i class="fa-solid fa-phone"></i> +91 9372763388</p>
+
+        <p><i class="fa-solid fa-envelope"></i>vntattooart@gmail.com</p>
+
+        <div class="social-icons">
+
+            <a href="https://instagram.com/nileshmurtadak" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#"><i class="fab fa-facebook"></i></a>
+
+            <a href="https://wa.me/9372763388" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>© 2026 V.N Tattoo Studio | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
